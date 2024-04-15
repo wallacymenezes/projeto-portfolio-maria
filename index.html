@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Fontes do Google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!--Icones da Fontawesome-->
+        <script src="https://kit.fontawesome.com/e0a2701c69.js" crossorigin="anonymous"></script>
+        <!--Css da pagina-->
+        <link rel="stylesheet" href="style.css">
+        <title>Portifolio</title>
+    </head>
+    <body>
+        <!--CABEÇALHO-->
+        <div class="container">
+            <div id="header">
+                Portfolio
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="#services">Menu de Serviços</a></li>
+                    <li><a href="#contact">Fale Comigo</a></li>
+                    <li><a href="#img-portifolio">Portifólio</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--CAPA-->
+        <div class="container">
+            <div id="headerCta">
+                <h1>
+                    Olá, meu nome <br>
+                    é Maria
+                </h1>
+                <p class="gray">
+                    Sou programadora e gostaria de apresentar meu <br> 
+                    trabalho para você através deste portfólio.
+                </p>
+                <a id="buttonCta" href="">Meus Serviços</a>
+            </div>
+            <div id="headerImg">
+                <img src="imagens/banner.svg" alt="">
+            </div>
+        </div>
+        <!--CLIENTES-->
+        <div class="container" id="clients">
+            <div id="headerClientText">
+                Alguns dos <br>
+                meus clientes
+            </div>
+            <div class="headerLogo">
+                <img src="imagens/apple.svg" alt="">
+            </div>
+            <div class="headerLogo">
+                <img src="imagens/slack.svg" alt="">
+            </div>
+            <div class="headerLogo">
+                <img src="imagens/spotify.svg" alt="">
+            </div>
+        </div>
+        <!--TITULO SERVIÇOS-->
+        <div class="container textCenter">
+            <div id="services">
+                <h2 class="red">Conheça</h2>
+                <h1 class="black">Meus Serviços</h1>
+            </div>
+        </div>
+        <!--SERVIÇOS-->
+        <div class="container" id="services">
+            <div class="textCenter">
+                <img src="imagens/maleta.svg" alt="">
+                <h3>Consultoria</h3>
+                <p class="gray">Te ajudo a organizar sua empresa <br>
+                    e melhorar seus resultados.</p>
+            </div>
+            <div class="textCenter">
+                <img src="imagens/ponteiro.svg" alt="">
+                <h3>Email Marketing</h3>
+                <p class="gray">Gerenciar campanhas é difícil. <br>
+                    Conte comigo para te ajudar.</p>
+            </div>
+            <div class="textCenter">
+                <img src="imagens/globo.svg" alt="">
+                <h3>Criação de Sites</h3>
+                <p class="gray">Desenvolvo seu site inteiro <br>
+                    do zero e te entrego prontinho.</p>
+            </div>
+        </div>
+        <!--CONTATO - FORM-->
+        <div class="container" id="contact">
+            <div id="contactImg">
+                <img src="imagens/contactImg.svg" alt="">
+            </div>
+            <div id="contactForm">
+                <h2 class="red">Economize seu tempo</h2>
+                <h1 class="black">Ganhe mais dinheiro</h1>
+                <p class="gray">Digite aqui seu endereço de e-mail. Eu entrarei em <br>
+                    contato para fornecer um diagnóstico gratuito.</p>
+                <br>
+                <form action="https://formspree.io/f/xdoqpvog" method="post">
+                    <p><input type="text" placeholder="E-mail" required name="contactEmail"></p> <br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <!--PORTIFOLIO TITULO-->
+        <div class="container" id="titulo-portifolio">
+            <div>
+                <h2 class="red">Conheça meu trabalho</h2> 
+            <h1 class="black">Portfólio</h1>
+            </div>
+        </div>
+        <!--IMAGENS PORTIFOLIO-->
+        <div class="container" id="img-portifolio">
+            <div class="portifolioImg">
+                <img src="imagens/trabalho1.svg" alt="">
+            </div>
+            <div class="portifolioImg">
+                <img src="imagens/trabalho2.svg" alt="">
+            </div>
+            <div class="portifolioImg">
+                <img src="imagens/trabalho3.svg" alt="">
+            </div>
+        </div>
+        <!--SCRIPT PARA SUAVIZAR A DESCIDA ATÉ A ANCORA-->
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
